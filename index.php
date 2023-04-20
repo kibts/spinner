@@ -1,89 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Квиз</title>
 	<style type="text/css">
 		body {
 			background-color: #FDD4CE;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
+			text-align: center;
 		}
-
-		.quiz-container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-
 		.spinner {
-			margin-bottom: 30px;
-		}
-
-		.spinner .spinner-container {
-			width: 100px;
-			height: 100px;
-			position: relative;
+			border: 16px solid #f3f3f3;
+			border-top: 16px solid #333;
 			border-radius: 50%;
-			border: 8px solid #fff;
-			box-sizing: border-box;
-		}
-
-		.spinner .spinner-container:before,
-		.spinner .spinner-container:after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-top: -3px;
-			margin-left: -3px;
-			width: 0;
-			height: 0;
-			border-radius: 50%;
-			border: 8px solid transparent;
-			border-top-color: #000;
-		}
-
-		.spinner .spinner-container:before {
+			width: 120px;
+			height: 120px;
 			animation: spin 4s linear infinite;
+			margin: auto;
+			margin-top: 20px;
 		}
-
-		.quiz-result {
-			font-size: 24px;
-			font-weight: bold;
-			margin-bottom: 20px;
-		}
-
-		.btn {
-			display: inline-block;
-			padding: 10px 20px;
-			border-radius: 5px;
-			background-color: #000;
-			color: #fff;
-			font-size: 18px;
-			font-weight: bold;
-			text-decoration: none;
-		}
-
-		.btn:hover {
-			background-color: #333;
-		}
-
 		@keyframes spin {
-			to {
-				transform: rotate(360deg);
-			}
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+		.button {
+			background-color: #000000;
+			color: #ffffff;
+			border: none;
+			padding: 16px 32px;
+			text-align: center;
+			font-size: 16px;
+			margin: 20px auto;
+			display: block;
+			cursor: pointer;
+			border-radius: 5px;
+			text-decoration: none;
 		}
 	</style>
 </head>
 <body>
-	<div class="quiz-container">
-		<div class="spinner">
-			<div class="spinner-container"></div>
-		</div>
-		<div class="quiz-result">Поздравляем! Ваши ответы приняты, вы можете принять участие в розыгрыше призов</div>
-		<a href="#" class="btn">Перейти</a>
-	</div>
+	<div class="spinner"></div>
+	<p>Пожалуйста, подождите...</p>
+	<p id="result"></p>
+	<a href="#" class="button" id="redirect-button" style="display: none;">Перейти</a>
+	<script type="text/javascript">
+		setTimeout(function() {
+			document.querySelector(".spinner").style.display = "none";
+			document.querySelector("p").style.display = "none";
+			document.querySelector("#result").innerHTML = "Поздравляем! Ваши ответы приняты, вы можете принять участие в розыгрыше призов.";
+			document.querySelector("#redirect-button").style.display = "block";
+		}, 4000);
+	</script>
 </body>
 </html>
