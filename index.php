@@ -33,7 +33,7 @@
 			100% { transform: rotate(360deg); }
 		}
 		.message {
-			color: #FFFFFF;
+			color: #000000;
 			background-color: none;
 			border: none;
 			border-radius: 5px;
