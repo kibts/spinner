@@ -1,72 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Мой квиз</title>
-	<!-- Добавляем стили спиннера -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style>
+	<title>Квиз</title>
+	<style type="text/css">
+		body {
+			background-color: #FDD4CE;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.quiz-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
 		.spinner {
-		  margin: 100px auto;
-		  width: 40px;
-		  height: 40px;
-		  position: relative;
+			margin-bottom: 30px;
 		}
 
-		.double-bounce1, .double-bounce2 {
-		  width: 100%;
-		  height: 100%;
-		  border-radius: 50%;
-		  background-color: #333;
-		  opacity: 0.6;
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-		  animation: sk-bounce 2.0s infinite ease-in-out;
+		.spinner .spinner-container {
+			width: 100px;
+			height: 100px;
+			position: relative;
+			border-radius: 50%;
+			border: 8px solid #fff;
+			box-sizing: border-box;
 		}
 
-		.double-bounce2 {
-		  -webkit-animation-delay: -1.0s;
-		  animation-delay: -1.0s;
+		.spinner .spinner-container:before,
+		.spinner .spinner-container:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -3px;
+			margin-left: -3px;
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			border: 8px solid transparent;
+			border-top-color: #000;
 		}
 
-		@-webkit-keyframes sk-bounce {
-		  0%, 100% { -webkit-transform: scale(0.0) }
-		  50% { -webkit-transform: scale(1.0) }
+		.spinner .spinner-container:before {
+			animation: spin 4s linear infinite;
 		}
 
-		@keyframes sk-bounce {
-		  0%, 100% {
-		    transform: scale(0.0);
-		    -webkit-transform: scale(0.0);
-		  } 50% {
-		    transform: scale(1.0);
-		    -webkit-transform: scale(1.0);
-		  }
+		.quiz-result {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 10px 20px;
+			border-radius: 5px;
+			background-color: #000;
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		.btn:hover {
+			background-color: #333;
+		}
+
+		@keyframes spin {
+			to {
+				transform: rotate(360deg);
+			}
 		}
 	</style>
 </head>
 <body>
-	<!-- Добавляем спиннер и блок с результатом -->
-	<div class="spinner" id="spinner">
-		<div class="double-bounce1"></div>
-		<div class="double-bounce2"></div>
+	<div class="quiz-container">
+		<div class="spinner">
+			<div class="spinner-container"></div>
+		</div>
+		<div class="quiz-result">Поздравляем! Ваши ответы приняты, вы можете принять участие в розыгрыше призов</div>
+		<a href="#" class="btn">Перейти</a>
 	</div>
-	<div id="result" style="display:none;">
-		<p>Вы ответили на все вопросы!</p>
-		<button onclick="redirectToPrizePage()">Перейти</button>
-	</div>
-	
-	<!-- Добавляем скрипт -->
-	<script>
-		setTimeout(function() {
-			document.getElementById("spinner").style.display = "none";
-			document.getElementById("result").style.display = "block";
-		}, 4000);
-
-		function redirectToPrizePage() {
-			window.location.href = "https://example.com/prize-page";
-		}
-	</script>
 </body>
 </html>
