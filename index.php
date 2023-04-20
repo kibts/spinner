@@ -71,7 +71,6 @@
 	<div class="spinner"></div>
 	<p>Пожалуйста, подождите...</p>
 	<p class="message"></p>
-	<img src="image.jpg" alt="Розыгрыш призов" style="width: 100%; max-width: 500px; height: auto; margin-bottom: 1em;">
 	<button onclick="location.href='https://example.com'">Перейти</button>
 </body>
 </html>
