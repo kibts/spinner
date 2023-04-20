@@ -70,7 +70,6 @@
 	<h1>Пройдите наш квиз и выиграйте приз!</h1>
 	<div class="spinner"></div>
 	<p>Пожалуйста, подождите...</p>
-	<img src="https://i.imgur.com/Gl1Y5Ha_d.webp?maxwidth=760&fidelity=grand" alt="Поздравляем">
 	<p class="message"></p>
 	<button onclick="location.href='https://example.com'">Перейти</button>
 </body>
