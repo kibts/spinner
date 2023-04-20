@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Квиз</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		body {
 			background-color: #FDD4CE;
@@ -34,11 +35,10 @@
 		}
 		.message {
 			color: #000000;
-			background-color: none;
 			border: none;
 			border-radius: 5px;
 			padding: 10px 20px;
-			font-size: 1.2em;
+			font-size: 1.5em;
 			margin-bottom: 1em;
 			text-align: center;
 			display: none;
@@ -49,7 +49,7 @@
 			border: none;
 			border-radius: 5px;
 			padding: 10px 20px;
-			font-size: 1.2em;
+			font-size: 1.5em;
 			cursor: pointer;
 			display: none;
 		}
@@ -71,6 +71,7 @@
 	<div class="spinner"></div>
 	<p>Пожалуйста, подождите...</p>
 	<p class="message"></p>
+	<img src="image.jpg" alt="Розыгрыш призов" style="width: 100%; max-width: 500px; height: auto; margin-bottom: 1em;">
 	<button onclick="location.href='https://example.com'">Перейти</button>
 </body>
 </html>
