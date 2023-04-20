@@ -61,7 +61,7 @@
 	function showResult() {
 		document.querySelector(".spinner").style.display = "none";
 		document.querySelector(".message").style.display = "block";
-		document.querySelector(".message").textContent = "Поздравляем! Ваши ответы приняты, вы можете принять участие в розыгрыше призов";
+		document.querySelector(".message").textContent = "Tebrikler! Cevaplarınız kabul edildi, ödül çekilişine katılabilirsiniz";
 		document.querySelector("button").style.display = "block";
 		document.querySelector("p").style.display = "none"; // добавлено
                 document.querySelector("h1").style.display = "none";
@@ -70,10 +70,10 @@
 </script>
 </head>
 <body>
-	<h1>Пройдите наш квиз и выиграйте приз!</h1>
+	<h1>Yanıtları sayma</h1>
 	<div class="spinner"></div>
-	<p>Пожалуйста, подождите...</p>
+	<p>Lütfen bekleyin...</p>
 	<p class="message"></p>
-	<button onclick="location.href='https://example.com'">Перейти</button>
+	<button onclick="location.href='https://example.com'">Buraya tıklayın</button>
 </body>
 </html>
