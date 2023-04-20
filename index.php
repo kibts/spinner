@@ -65,9 +65,7 @@
 	</script>
 </head>
 <body>
-	<h1>Пройдите наш квиз и выиграйте приз!</h1>
 	<div class="spinner"></div>
-	<p>Пожалуйста, подождите...</p>
 	<p class="message"></p>
 	<button onclick="location.href='https://example.com'">Перейти</button>
 </body>
