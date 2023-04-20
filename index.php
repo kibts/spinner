@@ -1,77 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Квиз</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      body {
-        background-color: #fdd4ce;
-      }
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .spinner {
-        border: 16px solid #f3f3f3;
-        border-top: 16px solid #333;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        animation: spin 2s linear infinite;
-      }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      .button {
-        display: none;
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: black;
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .button.show {
-        display: block;
-      }
-      @media (max-width: 480px) {
-        .spinner {
-          width: 80px;
-          height: 80px;
-          border-width: 8px;
-        }
-        .button {
-          font-size: 16px;
-          padding: 8px 16px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="spinner"></div>
-      <button class="button" id="button" onclick="redirectToPrize()">Перейти</button>
-    </div>
-    <script>
-      function redirectToPrize() {
-        window.location.href = "https://example.com/prize";
-      }
-      setTimeout(function() {
-        document.querySelector('.spinner').style.display = 'none';
-        document.querySelector('.button').classList.add('show');
-      }, 4000);
-    </script>
-  </body>
+<head>
+	<title>Квиз</title>
+	<style>
+		body {
+			background-color: #FDD4CE;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #000000;
+			text-align: center;
+			font-size: 2em;
+			margin-bottom: 1em;
+		}
+		.spinner {
+			animation: spin 4s infinite linear;
+			border: 10px solid #000000;
+			border-top: 10px solid #FFFFFF;
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			margin-bottom: 1em;
+		}
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+		.message {
+			color: #FFFFFF;
+			background-color: #000000;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 1.2em;
+			margin-bottom: 1em;
+			text-align: center;
+			display: none;
+		}
+		button {
+			background-color: #000000;
+			color: #FFFFFF;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 1.2em;
+			cursor: pointer;
+			display: none;
+		}
+	</style>
+	<script>
+		function showResult() {
+			document.querySelector(".spinner").style.display = "none";
+			document.querySelector(".message").style.display = "block";
+			document.querySelector(".message").textContent = "Поздравляем! Ваши ответы приняты, вы можете принять участие в розыгрыше призов";
+			document.querySelector("button").style.display = "block";
+		}
+		setTimeout(showResult, 4000);
+	</script>
+</head>
+<body>
+	<h1>Пройдите наш квиз и выиграйте приз!</h1>
+	<div class="spinner"></div>
+	<p>Пожалуйста, подождите...</p>
+	<p class="message"></p>
+	<button onclick="location.href='https://example.com'">Перейти</button>
+</body>
 </html>
