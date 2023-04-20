@@ -5,10 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		body {
-			background-image: url('img/fon.jpg');
-                        background-repeat: no-repeat;
-                        background-size: cover;
-  /* остальные стили */
+			background-color: transparent;
+			background-image: url('/img/fon.jpg');
+			background-size: cover;
+			background-position: center center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			font-family: Arial, sans-serif;
 		}
 		h1 {
 			color: #000000;
