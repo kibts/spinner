@@ -5,14 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		body {
-			background-color: #FDD4CE;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-			margin: 0;
-			font-family: Arial, sans-serif;
+			background-image: url('img/название_картинки.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+  /* остальные стили */
 		}
 		h1 {
 			color: #000000;
