@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		body {
-			background-image: url('img/название_картинки.jpg');
+			background-image: url('img/fon.jpg');
                         background-repeat: no-repeat;
                         background-size: cover;
   /* остальные стили */
