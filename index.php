@@ -56,12 +56,13 @@
 	</style>
 	<script>
 	function showResult() {
-    document.querySelector(".spinner").style.display = "none";
-    document.querySelector("h1").style.display = "none";
-    document.querySelector(".message").style.display = "block";
-    document.querySelector(".message").textContent = "Поздравляем! Ваши ответы приняты, вы можете принять участие в розыгрыше призов";
-    document.querySelector("button").style.display = "block";
-}
+		document.querySelector(".spinner").style.display = "none";
+		document.querySelector(".message").style.display = "block";
+		document.querySelector(".message").textContent = "Поздравляем! Ваши ответы приняты, вы можете принять участие в розыгрыше призов";
+		document.querySelector("button").style.display = "block";
+		document.querySelector("p").style.display = "none"; // добавлено
+                document.querySelector("h1").style.display = "none";
+	}
 	setTimeout(showResult, 4000);
 </script>
 </head>
