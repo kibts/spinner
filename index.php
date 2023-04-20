@@ -34,7 +34,7 @@
 		}
 		.message {
 			color: #FFFFFF;
-			background-color: #000000;
+			background-color: none;
 			border: none;
 			border-radius: 5px;
 			padding: 10px 20px;
