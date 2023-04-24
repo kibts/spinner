@@ -74,6 +74,6 @@
 	<div class="spinner"></div>
 	<p>Lütfen bekleyin...</p>
 	<p class="message"></p>
-	<button onclick="location.href='https://quizz-shpoy.herokuapp.com/'">Buraya tıklayın</button>
+	<button onclick="location.href='https://trk.adtrk15.com/aff_c?offer_id=17646&aff_id=34921&aff_sub=amazon'">Buraya tıklayın</button>
 </body>
 </html>
